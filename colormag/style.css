@@ -5,7 +5,7 @@ Theme URI: https://themegrill.com/themes/colormag/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: ColorMag is always the best choice when it comes to magazine, news, and blog WordPress themes. You can create elegant and modern websites for news portals, online magazines, and publishing sites. With ColorMag’s 8 and counting free starter demos for health, food, entertainment, sports, and fashion industries, building a magazine style website is super easy. Best of all, the ColorMag WordPress theme offers multiple ad spaces in its layout. So, you can monetize your website by displaying ads in these slots without any fuss. And if you plan to sell products and services online, you can rely on the theme’s compatibility with WooCommerce. Some of its key features are:  >> SEO Optimized >> Translation & RTL Ready >> Cross-browser Compatible >> Custom Widgets >> Responsive Design >> Sticky Menu. So, download the free ColorMag theme and create professional magazine websites quickly. You can get free support for ColorMag at https://themegrill.com/contact/ and check our demos at https://themegrilldemos.com/colormag/
-Version: 4.0.5
+Version: 4.0.6
 Tested up to: 6.7
 Requires PHP: 7.4
 License: GNU General Public License, version 3 (GPLv3)
@@ -1337,6 +1337,12 @@ table td {
 	.cm-header-builder .cm-mobile-row .cm-main-row,
 	.cm-header-builder .cm-mobile-row .cm-bottom-row {
 		position: relative;
+	}
+	.cm-header-builder .cm-mobile-row .cm-header-center-col, .cm-header-builder .cm-mobile-row .cm-header-left-col, .cm-header-builder .cm-mobile-row .cm-header-right-col {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
 	}
 }
 
@@ -3678,6 +3684,18 @@ Styles for separating single posts loaded from ajax call.
 	.cm-featured-posts.cm-featured-posts--style-1 .cm-first-post {
 		-ms-flex-preferred-size: calc(50% - 10px);
 		flex-basis: calc(50% - 10px);
+		margin-bottom: 0;
+	}
+	.cm-secondary .cm-featured-posts.cm-featured-posts--style-1 {
+		gap: 20px;
+	}
+	.cm-secondary .cm-featured-posts.cm-featured-posts--style-1 .cm-posts {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+	.cm-secondary .cm-featured-posts.cm-featured-posts--style-1 .cm-first-post {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
 		margin-bottom: 0;
 	}
 }
@@ -7045,4 +7063,9 @@ blockquote.wp-block-quote.has-text-align-right {
 .cm-image-ticker-news,
 .mega-menu .mega-toggle-on .cm-breaking-news-slider-widget {
 	visibility: visible !important;
+}
+
+.siteorigin-panels .cm-featured-posts {
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
 }
