@@ -13,7 +13,7 @@ $options = array(
 					'title'   => esc_html__( 'General', 'colormag' ),
 					'section' => 'colormag_global_container_section',
 				),
-				'colormag_container_layout' => array(
+				'colormag_container_layout'     => array(
 					'default'   => 'wide',
 					'type'      => 'customind-radio-image',
 					'title'     => esc_html__( 'Layout', 'colormag' ),
@@ -31,6 +31,20 @@ $options = array(
 					),
 					'columns'   => 2,
 					'priority'  => 10,
+				),
+				'colormag_content_area_padding' => array(
+					'default'     => array(
+						'top'    => '60',
+						'right'  => '',
+						'bottom' => '60',
+						'left'   => '',
+						'unit'   => 'px',
+					),
+					'type'        => 'customind-dimensions',
+					'title'       => esc_html__( 'Content Area Padding', 'colormag' ),
+					'section'     => 'colormag_button_section',
+					'units'       => array( 'px', 'em' ),
+					'defaultUnit' => 'px',
 				),
 			)
 		),
@@ -72,6 +86,9 @@ $options = array(
 					'section'   => 'colormag_global_container_section',
 					'transport' => 'postMessage',
 					'priority'  => 20,
+					'condition' => array(
+						'colormag_container_layout' => 'boxed',
+					),
 				),
 			)
 		),

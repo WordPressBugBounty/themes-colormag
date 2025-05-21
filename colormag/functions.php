@@ -37,7 +37,7 @@ require get_template_directory() . '/inc/admin/class-colormag-changelog-parser.p
 
 
 ///** ColorMag setup file, hooked for `after_setup_theme`. */
-//require COLORMAG_INCLUDES_DIR . '/colormag-setup.php';
+require COLORMAG_INCLUDES_DIR . '/colormag-setup.php';
 
 /**
  * Base.
@@ -73,7 +73,6 @@ require_once COLORMAG_CUSTOMIZER_DIR . '/class-colormag-customizer.php';
 
 // Load customind.
 require_once COLORMAG_CUSTOMIZER_DIR . '/customind/init.php';
-
 /**
  * @var \Customind\Core\Customind
  */
@@ -84,12 +83,17 @@ $customind->set_i18n_data(
 		'domain' => 'colormag',
 	]
 );
-$customind->set_section_i18n(
-	[
-		/* Translators: 1: Panel Title. */
-		'customizing-action' => __( 'Customizing &#9656; %s', 'colormag' ),
-		'customizing'        => __( 'Customizing', 'colormag' ),
-	]
+add_action(
+	'after_setup_theme',
+	function () use ( $customind ) {
+		$customind->set_section_i18n(
+			[
+				/* Translators: 1: Panel Title. */
+				'customizing-action' => __( 'Customizing ▶ %s', 'colormag' ),
+				'customizing'        => __( 'Customizing', 'colormag' ),
+			]
+		);
+	}
 );
 
 /**
@@ -156,6 +160,7 @@ require COLORMAG_INCLUDES_DIR . '/colormag-wp-query.php';
 
 /** Breadcrumb class. */
 require_once COLORMAG_INCLUDES_DIR . '/class-breadcrumb-trail.php';
+require_once COLORMAG_INCLUDES_DIR . '/class-colormag-starter-content.php';
 
 /** Load functions */
 require_once COLORMAG_INCLUDES_DIR . '/ajax.php';

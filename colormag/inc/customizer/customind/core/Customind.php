@@ -102,9 +102,9 @@ class Customind {
 	 * @return void
 	 */
 	public function init_hooks() {
-		add_action( 'customize_controls_enqueue_scripts', [ $this, 'enqueue_scripts' ], PHP_INT_MAX );
-		add_action( 'customize_register', [ $this, 'register' ], PHP_INT_MAX );
-		add_action( 'customize_preview_init', [ $this, 'enqueue_preview_scripts' ], PHP_INT_MAX );
+		add_action( 'customize_controls_enqueue_scripts', [ $this, 'enqueue_scripts' ], 999 );
+		add_action( 'customize_register', [ $this, 'register' ], 999 );
+		add_action( 'customize_preview_init', [ $this, 'enqueue_preview_scripts' ], 999 );
 		add_action( 'customize_save_after', [ $this, 'on_save' ] );
 
 		$this->add_action( 'register:control', [ $this, 'process_settings' ], 10, 3 );
@@ -365,7 +365,7 @@ class Customind {
 		wp_enqueue_style( 'customind', $this->get_asset_url( 'customind.css' ), [ 'wp-components' ], $asset['version'] );
 		// Support RTL.
 		wp_style_add_data( 'customind', 'rtl', 'replace' );
-		wp_enqueue_script( 'customind', $this->get_asset_url( 'customind.js' ), array_merge( $asset['dependencies'], [ 'customize-preview' ] ), $asset['version'], true );
+		wp_enqueue_script( 'customind', $this->get_asset_url( 'customind.js' ), array_merge( $asset['dependencies'] ), $asset['version'], true );
 
 		if ( ! empty( $this->i18n_data['domain'] ) && ! empty( $this->i18n_data['path'] ) ) {
 			wp_set_script_translations( 'customind', $this->i18n_data['domain'], $this->i18n_data['path'] );

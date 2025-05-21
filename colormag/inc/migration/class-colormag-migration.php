@@ -375,6 +375,11 @@ if ( ! class_exists( 'ColorMag_Migration' ) ) {
 				return;
 			}
 
+			if ( ( doing_action( 'themegrill_ajax_demo_imported' ) && get_theme_mod( 'demo_migrated_to_builder' ) ) || get_option( 'colormag_free_demo_migrated_to_builder' ) ) {
+				update_option( 'colormag_free_demo_migrated_to_builder', true );
+				return;
+			}
+
 			$header_builder_config = [
 				'desktop' => array(
 					'top'    => array(

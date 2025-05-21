@@ -90,7 +90,7 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 			$inline_style_handle = ( 'white' === $skin_color ) ? 'colormag_style' : 'colormag_dark_style';
 
 			// Loads our main css.
-			wp_enqueue_style( 'colormag_style', get_stylesheet_uri(), array(), COLORMAG_THEME_VERSION );
+			wp_enqueue_style( 'colormag_style', get_stylesheet_uri(), array(), time() );
 			wp_style_add_data( 'colormag_style', 'rtl', 'replace' );
 
 			// Load dark css.
@@ -220,26 +220,6 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 					'handle'  => 'font-awesome-4',
 					'file'    => '/library/font-awesome/css/v4-shims',
 					'version' => '4.7.0',
-				),
-				array(
-					'handle'  => 'font-awesome-all',
-					'file'    => '/library/font-awesome/css/all',
-					'version' => '6.2.4',
-				),
-				array(
-					'handle'  => 'font-awesome-solid',
-					'file'    => '/library/font-awesome/css/solid',
-					'version' => '6.2.4',
-				),
-				array(
-					'handle'  => 'font-awesome-solid',
-					'file'    => '/library/font-awesome/css/regular',
-					'version' => '6.2.4',
-				),
-				array(
-					'handle'  => 'font-awesome-solid',
-					'file'    => '/library/font-awesome/css/brands',
-					'version' => '6.2.4',
 				),
 			);
 
@@ -375,6 +355,53 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 				padding: 10px 30px 11px 14px;
 				display: block;
 				}
+
+				#accordion-panel-nav_menus {
+				margin-top:10px;
+				}
+
+				#accordion-section-colormag_customize_fb_section {
+				display: flex;
+				    justify-content: center;
+				}
+
+			#customize-theme-controls #accordion-section-colormag_customize_fb_section .accordion-section-title {
+             background: transparent !important;
+		    width: 208px;
+		    border: 1px solid #1877F2;
+		    border-radius: 4px;
+		    margin: 21px;
+		    position: relative;
+		    text-align: right;
+		}
+
+		#customize-theme-controls #accordion-section-colormag_customize_fb_section .accordion-section-title:hover {
+		    background: #F7F7F7 !important;
+			}
+
+		#accordion-section-colormag_customize_fb_section .accordion-section-title::before {
+		        content: "\f09a";
+			    font-family: "Font Awesome 6 Brands";
+			    position: absolute;
+			    right: 185px;
+			    top: 48%;
+			    transform: translateY(-50%);
+			    color: #1877F2;
+			    font-size: 15px;
+			    display: block;
+					}
+
+		#customize-theme-controls #accordion-section-colormag_customize_fb_section .accordion-section-title a {
+		       color: #1877F2 !important;
+		    padding: 10px 10px 10px 11px;
+		    display:block;
+
+		}
+
+		#customize-theme-controls #accordion-section-colormag_customize_fb_section .accordion-section-title a:focus {
+		       box-shadow: 0 0 0 0 #2271b1;
+            outline: 0 solid transparent;
+		}
 		    '
 			);
 		}
