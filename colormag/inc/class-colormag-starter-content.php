@@ -56,7 +56,7 @@ class ColorMag_Starter_Content {
 				'top'    => array(
 					'left'   => array(),
 					'center' => array(),
-					'right'  => array( 'socials' ),
+					'right'  => array( 'date' ),
 				),
 				'main'   => array(
 					'left'   => array(),
@@ -183,7 +183,7 @@ class ColorMag_Starter_Content {
 			],
 			'theme_mods'  => require __DIR__ . '/compatibility/starter-content/theme-mods.php',
 			'attachments' => array(
-				'logo' => array(
+				'cm-starter-logo' => array(
 					'post_title'   => 'Logo',
 					'post_content' => 'Attachment Description',
 					'post_excerpt' => 'Attachment Caption',
