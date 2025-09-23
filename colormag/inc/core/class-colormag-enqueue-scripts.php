@@ -55,7 +55,7 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'colormag_scripts_styles_method' ) );
 
-			add_action( 'enqueue_block_editor_assets', array( $this, 'colormag_block_editor_styles' ), 1 );
+			add_action( 'enqueue_block_assets', array( $this, 'colormag_block_editor_styles' ), 1 );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'colormag_inline_customizer_css' ) );
 
@@ -185,7 +185,6 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 			// Theme custom JS.
 			wp_enqueue_script( 'colormag-custom', COLORMAG_JS_URL . '/colormag-custom' . $suffix . '.js', array( 'jquery' ), COLORMAG_THEME_VERSION, true );
 
-
 			// BxSlider JS.
 			wp_enqueue_script( 'colormag-bxslider', COLORMAG_JS_URL . '/jquery.bxslider' . $suffix . '.js', array( 'jquery' ), COLORMAG_THEME_VERSION, true );
 
@@ -274,6 +273,10 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 		 */
 		public function colormag_block_editor_styles() {
 
+			if ( ! is_admin() ) {
+				return;
+			}
+
 			wp_enqueue_style( 'colormag-editor-googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600', array(), COLORMAG_THEME_VERSION );
 			wp_enqueue_style( 'colormag-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css', array(), COLORMAG_THEME_VERSION );
 			wp_enqueue_style( 'colormag-block-editor-dark-styles', get_template_directory_uri() . '/dark.css', array(), COLORMAG_THEME_VERSION );
@@ -284,6 +287,92 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 			wp_add_inline_style(
 				'customize-controls',
 				'
+				#customize-control-colormag_base_typography .customind-typography-label, #customize-control-colormag_headings_typography .customind-typography-label {
+					font-weight: 600;
+				}
+
+				#customize-control-site_icon {
+			    padding: 0px 12px;
+			    width: 92%;
+				}
+
+				#customize-control-site_icon .customize-control-title, #customize-control-site_icon .customize-control-description{
+					display:none;
+				}
+
+				#sub-accordion-section-colormag_category_colors_section {
+				margin-bottom: 10px;
+				}
+
+				.control-section-customind-section.open .section-meta {
+				margin-bottom: 10px !important;
+				}
+
+				#customize-control-site_icon .button-add-media{
+				border-radius: 4px;
+				}
+
+				#customize-control-colormag_header_builder_components {
+				margin-top:24px;
+				padding-right:16px;
+				}
+
+				#customize-control-colormag_footer_builder_components {
+			    padding-right:16px;
+				}
+
+			#accordion-section-colormag_transparent_header_section .accordion-section-title button::after {
+				    top: calc(50% - 7px);
+			}
+
+			#accordion-section-colormag_transparent_header_section .accordion-section-title button{
+			 font-weight: 400;
+			    font-size:12px;
+
+			}
+
+				#customize-control-blogname {
+			    padding: 0px 12px;
+				    width: 92%;
+				    padding-top: 10px;
+				    margin-top: 0;
+				    background: #FFF;
+				}
+
+				#customize-control-blogdescription {
+			    padding: 0px 12px;
+			    width: 90%;
+				}
+
+				#sub-accordion-panel-colormag_header_builder.current-panel {
+			    height: 995px !important;
+                 position: relative;
+                     background: #F0F0F1;
+				}
+
+				#sub-accordion-section-colormag_footer_builder_section {
+				background: #F0F0F1 !important;
+				margin-top: 20px !important;
+				}
+
+				#customize-control-colormag_header_builder_components {
+				    background: #F0F0F1 !important;
+				}
+
+
+			.accordion-section-title button.accordion-trigger:focus{
+				    box-shadow: 0 0 0 0px #2271b1;
+			}
+
+				.wp-full-overlay[data-customind-builder-panel="colormag_footer_builder"].in-sub-panel:not(.section-open) #customize-theme-controls ul[id="sub-accordion-section-colormag_footer_builder_section"]{
+			    top: 53px;
+			    height: 748px;
+				}
+
+				#customize-control-colormag_footer_builder_components .customind-footer-types {
+				display:none;
+				}
+
 		        #customize-control-colormag_site_identity_general_heading .customind-control .font-normal{
 		        font-weight: 600;
 		        }
@@ -359,10 +448,6 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 				display: block;
 				}
 
-				#accordion-panel-nav_menus {
-				margin-top:10px;
-				}
-
 				#accordion-section-colormag_customize_fb_section {
 				display: flex;
 				    justify-content: center;
@@ -405,8 +490,88 @@ if ( ! class_exists( 'ColorMag_Enqueue_Scripts' ) ) {
 		       box-shadow: 0 0 0 0 #2271b1;
             outline: 0 solid transparent;
 		}
+
+		#sub-accordion-section-colormag_header_builder_section {
+				margin-top: 100px;
+				    background: #F0F0F1;
+				}
+
+
+			#accordion-section-colormag_transparent_header_section {
+			    display: block !important;
+			    font-size:12px;
+			}
+
+			#accordion-section-title_tagline {
+			    margin-top: 40px;
+			    border-top: 1px solid #dcdcde !important;
+			}
+
+			#customize-controls .customize-info.section-meta,.customize-section-description,#customize-control-header_video,#customize-control-external_header_video,#customize-control-header_image,#customize-control-show_on_front {
+			padding: 0 10px !important;
+			width: 95%;
+			}
+
+			#customize-controls .customize-info {
+			     margin-bottom: 0;
+			}
+
+			#customize-control-colormag_header_builder_components {
+			    margin-top: 24px;
+			}
+
+			#customize-control-colormag_header_footer_components {
+			    margin-top: 24px;
+			}
+
+			#customize-control-colormag_color_palette .customind-preset-1,#customize-control-colormag_color_palette .customind-preset-2,#customize-control-colormag_color_palette .customind-preset-3,#customize-control-colormag_color_palette .customind-preset-4 {
+			display:none;
+			}
+
+			#accordion-section-colormag_sticky_header_section .accordion-section-title button::after {
+				    top: calc(50% - 7px);
+			}
 		    '
 			);
+
+			if ( colormag_maybe_enable_builder() ) {
+				wp_add_inline_style(
+					'customize-controls',
+					'
+#accordion-section-colormag_sticky_header_section .accordion-section-title{
+			border-top: 1px solid #dcdcde !important;
+			border-left: 1px solid #dcdcde !important;
+			border-right: 1px solid #dcdcde !important;
+			}
+
+			#accordion-section-colormag_sticky_header_section {
+			    display: block !important;
+			}
+
+				#accordion-section-colormag_sticky_header_section {
+					    position: absolute;
+					    bottom: 160px;
+					    width: 100%;
+				}
+
+				#accordion-section-colormag_sticky_header_section .accordion-section-title{
+			    margin: 0 10px;
+                border-radius: 4px;
+			}
+
+			#accordion-section-colormag_sticky_header_section .accordion-section-title button{
+			 font-weight: 400;
+			  font-size:12px;
+			}
+
+			#accordion-section-colormag_customize_header_navigation_section {
+					    position: absolute;
+					    bottom: 0px;
+				}
+					'
+				);
+
+			}
 		}
 	}
 
@@ -520,7 +685,6 @@ function colormag_image_uploader() {
 
 	wp_enqueue_media();
 	wp_enqueue_script( 'colormag-widget-image-upload', COLORMAG_JS_URL . '/image-uploader' . $suffix . '.js', false, COLORMAG_THEME_VERSION, true );
-
 }
 
 add_action( 'admin_enqueue_scripts', 'colormag_image_uploader' );
@@ -529,7 +693,7 @@ add_action( 'admin_enqueue_scripts', 'colormag_image_uploader' );
 function colormag_get_category_colors() {
 	$category_colors = array();
 	foreach ( get_categories() as $cat ) {
-		$color = get_theme_mod( 'colormag_category_color_' . $cat->term_id );
+		$color                            = get_theme_mod( 'colormag_category_color_' . $cat->term_id );
 		$category_colors[ $cat->term_id ] = $color;
 	}
 	return $category_colors;
@@ -617,7 +781,7 @@ if ( ! function_exists( 'colormag_parse_css' ) ) :
 	function colormag_parse_css( $default_value, $output_value, $css_output = array(), $min_media = '', $max_media = '' ) {
 
 		// Return if default value matches.
-		if ( $default_value === $output_value ) {
+		if ( strpos( $output_value, 'var' ) === false && $default_value === $output_value ) {
 			return;
 		}
 
@@ -698,7 +862,7 @@ if ( ! function_exists( 'colormag_parse_background_css' ) ) :
 	 */
 	function colormag_parse_background_css( $default_value, $output_value, $selector ) {
 
-		if ( $default_value == $output_value ) {
+		if ( strpos( $output_value['background-color'], 'var' ) === false && $default_value === $output_value ) {
 			return;
 		}
 
@@ -706,7 +870,7 @@ if ( ! function_exists( 'colormag_parse_background_css' ) ) :
 		$parse_css .= $selector . '{';
 
 		// For background color.
-		if ( isset( $output_value['background-color'] ) && ( $output_value['background-color'] != $default_value['background-color'] ) ) {
+		if ( isset( $output_value['background-color'] ) ) {
 			$parse_css .= 'background-color:' . $output_value['background-color'] . ';';
 		}
 
@@ -862,6 +1026,10 @@ if ( ! function_exists( 'colormag_parse_typography_css' ) ) :
 	 * @return string|void Generated CSS for typography CSS.
 	 */
 	function colormag_parse_typography_css( $default_value, $output_value, $selector, $devices = array() ) {
+
+		if ( isset( $default_value['font-family'] ) && 'Inherit' === $output_value['font-family'] ) {
+			$output_value['font-family'] = 'inherit';
+		}
 
 		if ( $default_value === $output_value ) {
 			return;

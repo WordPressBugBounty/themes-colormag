@@ -47,6 +47,7 @@ require COLORMAG_INCLUDES_DIR . '/base/class-colormag-dynamic-filter.php';
 
 // Generate dynamic CSS from styling options.
 require_once COLORMAG_INCLUDES_DIR . '/base/class-colormag-dynamic-css.php';
+require_once COLORMAG_INCLUDES_DIR . '/base/class-colormag-dynamic-builder-css.php';
 
 // Adds classes to appropriate places.
 require_once COLORMAG_INCLUDES_DIR . '/base/class-colormag-dynamic-classes.php';
@@ -73,6 +74,8 @@ require_once COLORMAG_CUSTOMIZER_DIR . '/class-colormag-customizer.php';
 
 // Load customind.
 require_once COLORMAG_CUSTOMIZER_DIR . '/customind/init.php';
+
+//require __DIR__ . '/../customind/init.php';
 
 /**
  * @var \Customind\Core\Customind
@@ -353,9 +356,20 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 function colormag_maybe_enable_builder() {
 
-	if ( get_option( 'colormag_builder_migration' ) ) {
+	if ( get_option( 'colormag_builder_migration' ) || get_option( 'colormag_maybe_enable_builder' ) ) {
 		return true;
 	}
+
+	if ( get_option( 'colormag_free_major_update_customizer_migration_v1' ) || get_option( 'colormag_top_bar_options_migrate' ) || get_option( 'colormag_breadcrumb_options_migrate' ) || get_option( 'colormag_social_icons_control_migrate' ) ) {
+		return false;
+	}
+
+	update_option( 'colormag_maybe_enable_builder', true );
+
+	return true;
+}
+
+function colormag_fresh_install() {
 
 	if ( get_option( 'colormag_free_major_update_customizer_migration_v1' ) || get_option( 'colormag_top_bar_options_migrate' ) || get_option( 'colormag_breadcrumb_options_migrate' ) || get_option( 'colormag_social_icons_control_migrate' ) ) {
 		return false;
@@ -507,3 +521,116 @@ add_action(
 		);
 	}
 );
+
+function colormag_typography_should_migrate() {
+	// Default values for comparison
+	$default_typography_presets   = '';
+	$default_base_typography_body = array(
+		'font-family'    => 'inherit',
+		'font-weight'    => 'regular',
+		'subsets'        => array( 'latin' ),
+		'font-size'      => array(
+			'desktop' => array(
+				'size' => '15',
+				'unit' => 'px',
+			),
+			'tablet'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+			'mobile'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+		),
+		'line-height'    => array(
+			'desktop' => array(
+				'size' => '1.6',
+				'unit' => '-',
+			),
+			'tablet'  => array(
+				'size' => '',
+				'unit' => '-',
+			),
+			'mobile'  => array(
+				'size' => '',
+				'unit' => '-',
+			),
+		),
+		'letter-spacing' => array(
+			'desktop' => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+			'tablet'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+			'mobile'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+		),
+	);
+
+	$default_base_heading_typography = array(
+		'font-family'    => 'inherit',
+		'font-weight'    => 'regular',
+		'subsets'        => array( 'latin' ),
+		'line-height'    => array(
+			'desktop' => array(
+				'size' => '1.2',
+				'unit' => '-',
+			),
+			'tablet'  => array(
+				'size' => '',
+				'unit' => '',
+			),
+			'mobile'  => array(
+				'size' => '',
+				'unit' => '',
+			),
+		),
+		'letter-spacing' => array(
+			'desktop' => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+			'tablet'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+			'mobile'  => array(
+				'size' => '',
+				'unit' => 'px',
+			),
+		),
+		'font-style'     => 'normal',
+		'text-transform' => 'none',
+	);
+
+	// Get current values
+	$current_typography_presets      = get_theme_mod( 'colormag_typography_presets', $default_typography_presets );
+	$current_base_typography_body    = get_theme_mod( 'colormag_base_typography', $default_base_typography_body );
+	$current_base_heading_typography = get_theme_mod( 'colormag_headings_typography', $default_base_heading_typography );
+
+	// Check if current values are different from default values
+	$should_migrate = false;
+
+	// Check typography presets
+	if ( $current_typography_presets !== $default_typography_presets ) {
+		$should_migrate = true;
+	}
+
+	// Check base typography body
+	if ( $current_base_typography_body !== $default_base_typography_body ) {
+		$should_migrate = true;
+	}
+
+	// Check base heading typography
+	if ( $current_base_heading_typography !== $default_base_heading_typography ) {
+		$should_migrate = true;
+	}
+
+	return $should_migrate;
+}
