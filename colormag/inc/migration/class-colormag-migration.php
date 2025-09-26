@@ -36,7 +36,7 @@ if ( ! class_exists( 'ColorMag_Migration' ) ) {
 			$theme_installed_time = get_option( 'colormag_theme_installed_time' ); // timestamp
 			$today                = strtotime( '2025-09-22' );
 
-			if ( ! colormag_fresh_install() || ( $theme_installed_time < $today ) ) {
+			if ( ! colormag_fresh_install() || ( ! empty( $theme_installed_time ) && $theme_installed_time < $today ) ) {
 				add_action( 'after_setup_theme', [ $this, 'colormag_container_sidebar_migration' ] );
 				add_action( 'after_setup_theme', [ $this, 'colormag_typography_migration' ] );
 			}
@@ -209,8 +209,6 @@ if ( ! class_exists( 'ColorMag_Migration' ) ) {
 				)
 			);
 
-			error_log( print_r( $colormag_default_sidebar_layout, true ) );
-			error_log( print_r( $colormag_page_layout, true ) );
 			if ( 'right_sidebar' === $colormag_default_sidebar_layout || 'left_sidebar' === $colormag_default_sidebar_layout || 'two_sidebars' === $colormag_default_sidebar_layout ) {
 				set_theme_mod( 'colormag_blog_sidebar_layout', $colormag_default_sidebar_layout );
 				set_theme_mod( 'colormag_blog_container_layout', 'no_sidebar_full_width' );
@@ -283,7 +281,7 @@ if ( ! class_exists( 'ColorMag_Migration' ) ) {
 
 			$default_palette = array(
 				'id'     => 'preset-5',
-				'name'   => 'Preset 1',
+				'name'   => 'Preset 5',
 				'colors' => array(
 					'colormag-color-1' => '#FFFFFF',
 					'colormag-color-2' => '#FAFAFA',

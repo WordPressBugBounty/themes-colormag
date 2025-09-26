@@ -3048,18 +3048,18 @@ class ColorMag_Dynamic_Builder_CSS {
 		}
 
 		$color_palette_default = array(
-			'id'     => 'preset-1',
-			'name'   => 'Preset 1',
+			'id'     => 'preset-5',
+			'name'   => 'Preset 5',
 			'colors' => array(
-				'cm-color-1' => '#207daf',
-				'cm-color-2' => '#3F3F46',
+				'cm-color-1' => '#257BC1',
+				'cm-color-2' => '#2270B0',
 				'cm-color-3' => '#FFFFFF',
-				'cm-color-4' => '#FAFAFA',
-				'cm-color-5' => '#27272a',
-				'cm-color-6' => '#444444',
-				'cm-color-7' => '#333333',
-				'cm-color-8' => '#E4E4E7',
-				'cm-color-9' => '#d4d4d8',
+				'cm-color-4' => '#F9FEFD',
+				'cm-color-5' => '#27272A',
+				'cm-color-6' => '#16181A',
+				'cm-color-7' => '#8F8F8F',
+				'cm-color-8' => '#FFFFFF',
+				'cm-color-9' => '#C7C7C7',
 			),
 		);
 
@@ -3185,15 +3185,15 @@ class ColorMag_Dynamic_Builder_CSS {
 				'id'     => 'preset-5',
 				'name'   => 'Preset 5',
 				'colors' => array(
-					'cm-color-1' => '#207daf',
+					'cm-color-1' => '#257BC1',
+					'cm-color-2' => '#2270B0',
 					'cm-color-3' => '#FFFFFF',
-					'cm-color-4' => '#FAFAFA',
-					'cm-color-2' => '#3F3F46',
-					'cm-color-5' => '#27272a',
-					'cm-color-6' => '#444444',
-					'cm-color-7' => '#333333',
-					'cm-color-8' => '#E4E4E7',
-					'cm-color-9' => '#d4d4d8',
+					'cm-color-4' => '#F9FEFD',
+					'cm-color-5' => '#27272A',
+					'cm-color-6' => '#16181A',
+					'cm-color-7' => '#8F8F8F',
+					'cm-color-8' => '#FFFFFF',
+					'cm-color-9' => '#C7C7C7',
 				),
 			),
 			array(
@@ -3353,23 +3353,6 @@ class ColorMag_Dynamic_Builder_CSS {
 				$matched_preset = $preset;
 				break;
 			}
-		}
-
-		if ( $matched_preset ) {
-			error_log( '=== MATCHED PRESET DETAILS ===' );
-			error_log( 'Preset ID: ' . $matched_preset['id'] );
-			error_log( 'Preset Name: ' . $matched_preset['name'] );
-			error_log( 'Is Modified: ' . ( $matched_preset['is_modified'] ? 'Yes' : 'No' ) );
-			error_log( 'Is Custom: ' . ( isset( $matched_preset['is_custom'] ) && $matched_preset['is_custom'] ? 'Yes' : 'No' ) );
-			error_log( 'Current Colors: ' . print_r( $matched_preset['colors'], true ) );
-
-			if ( $matched_preset['is_modified'] ) {
-				error_log( 'Original Colors: ' . print_r( $matched_preset['original_colors'], true ) );
-				error_log( 'Modified Colors: ' . print_r( $matched_preset['modified_colors'], true ) );
-			}
-			error_log( '=== END MATCHED PRESET ===' );
-		} else {
-			error_log( 'No preset found for ID: ' . $preset_id );
 		}
 
 		return $matched_preset;
