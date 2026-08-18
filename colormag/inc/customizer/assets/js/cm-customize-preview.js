@@ -843,7 +843,7 @@
 
 				case 'colormag_header_primary_menu_active_text_color':
 					css = colormagGenerateCommonCSS(
-						'.cm-header-builder .cm-primary-nav ul li.current-menu-item > a',
+						'.cm-header-builder .cm-primary-nav ul li.current-menu-item > a, .cm-header-builder .cm-primary-nav ul li.current-menu-ancestor > a',
 						'color',
 						value,
 					);
@@ -1011,6 +1011,14 @@
 					);
 					break;
 
+				case 'colormag_header_button_typography':
+					css = colormagGenerateTypographyCSS(
+						id,
+						'.cm-header-builder .cm-header-buttons .cm-header-button .cm-button',
+						value,
+					);
+					break;
+
 				case 'colormag_header_button_padding':
 					css = colormagGenerateDimensionCSS(
 						'.cm-header-builder .cm-header-buttons .cm-header-button .cm-button',
@@ -1029,7 +1037,7 @@
 
 				case 'colormag_header_search_border_radius':
 					css = colormagGenerateSliderCSS(
-						'.cm-search-icon-in-input-right .search-wrap input',
+						'.cm-search-icon-in-input-right .search-wrap input, .cm-search-icon-in-input-right .search-wrap, .cm-search-icon-in-input-right .search-icon-input-right',
 						'border-radius',
 						value,
 					);
@@ -1277,6 +1285,48 @@
 						'color',
 						value,
 					);
+					// Search Button Color wins over Placeholder Color for the Icon Inside Search icon when set; falls back to Placeholder Color otherwise.
+					css += colormagGenerateCommonCSS(
+						'.cm-search-icon-in-input-right .search-icon-input-right',
+						'color',
+						value || wp.customize('colormag_header_search_placeholder_color').get(),
+					);
+					break;
+
+				case 'colormag_header_search_icon_size':
+					css = colormagGenerateSliderCSS(
+						'.cm-header-builder .cm-top-search .search-top::before, .cm-header-builder .search-wrap .search-icon::before',
+						'font-size',
+						value,
+					);
+					css += colormagGenerateSliderCSS(
+						'.cm-search-icon-in-input-right .search-icon-input-right svg',
+						'width',
+						value,
+					);
+					css += colormagGenerateSliderCSS(
+						'.cm-search-icon-in-input-right .search-icon-input-right svg',
+						'height',
+						value,
+					);
+					// Explicit height opts the "Search Box" button out of the `.search-wrap` flex stretch that clips larger icons.
+					css += colormagGenerateSliderCSS(
+						'.cm-header-builder .search-wrap .search-icon',
+						'height',
+						value,
+					);
+					// Grow the "Icon Inside Search" input so a larger centered icon no longer spills above/below it.
+					css += colormagGenerateSliderCSS(
+						'.cm-search-icon-in-input-right .search-wrap input',
+						'min-height',
+						value,
+					);
+					// Let the fixed 48px `.fa.search-top` box grow with a custom icon size instead of clipping it.
+					if (value.size) {
+						css += '.cm-header-builder .fa.search-top{width:auto;height:auto;}';
+						// Match the other search types' padding now that the box grows with it, instead of the default 1px.
+						css += '.cm-header-builder .fa.search-top{padding:14px;}';
+					}
 					break;
 
 				case 'colormag_header_search_icon_hover_color':
@@ -1297,14 +1347,15 @@
 
 				case 'colormag_header_search_placeholder_color':
 					css = colormagGenerateCommonCSS(
-						'.search-wrap input::placeholder, .cm-search-icon-in-input-right .search-wrap i',
+						'.search-wrap input::placeholder',
 						'color',
 						value,
 					);
+					// The icon's `fill: currentColor` picks up this same wrapper color, but Search Button Color wins over it when set.
 					css += colormagGenerateCommonCSS(
-						'.cm-search-icon-in-input-right .search-wrap i',
-						'fill',
-						value,
+						'.cm-search-icon-in-input-right .search-icon-input-right',
+						'color',
+						wp.customize('colormag_header_search_icon_color').get() || value,
 					);
 					break;
 
@@ -1340,6 +1391,15 @@
 						'border-color',
 						value,
 					);
+					css += colormagGenerateCommonCSS(
+						'.cm-search-icon-in-input-right .search-icon-input-right',
+						'background-color',
+						value,
+					);
+					// Give the icon breathing room inside its new badge background instead of sitting flush against the edges.
+					if (value) {
+						css += '.cm-search-icon-in-input-right .search-icon-input-right{padding:6px;display:flex;align-items:center;justify-content:center;}';
+					}
 					break;
 
 				case 'colormag_header_search_button_hover_background':
@@ -1351,6 +1411,11 @@
 					css += colormagGenerateCommonCSS(
 						'.cm-header-builder .fa.search-top:hover, .cm-header-builder .search-wrap button:hover',
 						'border-color',
+						value,
+					);
+					css += colormagGenerateCommonCSS(
+						'.cm-search-icon-in-input-right .search-wrap:hover .search-icon-input-right',
+						'background-color',
 						value,
 					);
 					break;

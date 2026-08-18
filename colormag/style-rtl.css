@@ -5,7 +5,7 @@ Theme URI: https://themegrill.com/themes/colormag/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description:  ColorMag is a fast, flexible WordPress theme built for news portals, online magazines, personal blogs, and publishing sites. Trusted by 50,000+ publishers worldwide, it's the #1 news & magazine theme on WordPress.org. Whether you're launching a breaking news site, a lifestyle magazine, or a niche blog, ColorMag gives you everything you need out of the box — no coding required. It comes with 30+ one-click starter demos for news, health, sports, entertainment, and fashion niches. It integrates deeply with the Magazine Blocks plugin (21+ custom Gutenberg blocks for post layouts), includes built-in ad widget areas for easy monetization, and is optimized for Core Web Vitals and fast load times. Full Gutenberg support, WooCommerce compatibility, RTL and translation ready in 35+ languages, and clean SEO-friendly markup are all included. Download ColorMag free and get your news or magazine site live in minutes. Checkout our import ready starter sites at: https://themegrilldemos.com/#/themes/colormag
-Version: 4.2.1
+Version: 4.2.2
 Tested up to: 7.0
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -455,7 +455,7 @@ h2 {
 }
 
 h3 {
-	font-size: 3.2rem;
+	font-size: 2.4rem;
 }
 
 h4 {
@@ -988,7 +988,7 @@ table td {
 .cm-header-builder {
 	border-style: solid;
 	border-color: #E4E4E7;
-	border-width: 0 0 1px 0;
+	border-width: 0;
 	background: #FFFFFF;
 }
 .cm-header-builder .cm-site-title, .cm-header-builder .cm-site-description {
@@ -1076,6 +1076,7 @@ table td {
 	gap: 16px;
 	align-items: center;
 	height: 100%;
+	flex-basis: 30%;
 }
 .cm-header-builder .cm-main-row .cm-header-center-col {
 	display: flex;
@@ -1470,9 +1471,6 @@ table td {
 .cm-footer-builder .cm-footer-top-row .widget .cm-entry-title a {
 	color: #fff;
 }
-.cm-footer-builder .cm-footer-top-row .widget a {
-	color: #fff;
-}
 .cm-footer-builder .cm-footer-main-row {
 	padding-bottom: 60px;
 	padding-top: 60px;
@@ -1856,16 +1854,17 @@ table td {
 .cm-search-icon-in-input-right .search-icon-input-right {
 	position: absolute;
 	left: 10px;
-	top: 58%;
+	top: 50%;
 	transform: translateY(-50%);
 	color: #e4e4e7;
 	font-size: 16px;
 	pointer-events: none;
 }
 .cm-search-icon-in-input-right .search-icon-input-right svg {
+	display: block;
 	width: 18px;
 	height: 18px;
-	fill: #FFFFFF;
+	fill: currentColor;
 }
 .cm-search-icon-in-input-right .search-wrap:focus-within .search-icon-input-right {
 	display: none;
@@ -1902,6 +1901,9 @@ table td {
 	font-size: 1.4rem;
 	border-radius: 4px 0 0 4px;
 	line-height: 0.8;
+}
+.search-wrap button:hover {
+	background-color: var(--cm-color-1, #207daf);
 }
 
 .search-form-top {
@@ -3037,9 +3039,6 @@ Styles for separating single posts loaded from ajax call.
 	font-size: 1.2rem;
 }
 
-.cm-entry-summary {
-	margin-top: 12px;
-}
 .cm-entry-summary p {
 	margin-bottom: 1.5em;
 	font-size: 1.4rem;
@@ -3963,7 +3962,6 @@ Styles for separating single posts loaded from ajax call.
 
 .header-image {
 	margin-bottom: 0;
-	border-bottom: 1px solid var(--cm-color-8, #E4E4E7);
 	width: 100%;
 }
 
@@ -4316,24 +4314,29 @@ Styles for separating single posts loaded from ajax call.
 }
 /* Blog.
 --------------------------------------------- */
-.cm-posts.cm-layout-1-style-1 {
+.cm-posts.cm-layout-1-style-1, .cm-posts.cm-layout-1-style-2 {
 	--grid-column: 1;
 }
 
-.cm-layout-1-style-1 .post {
+.cm-layout-1-style-1 .post,
+.cm-layout-1-style-2 .post {
 	display: flex;
 	flex-direction: column;
 }
-.cm-layout-1-style-1 .post:first-child {
+.cm-layout-1-style-1 .post:first-child,
+.cm-layout-1-style-2 .post:first-child {
 	padding: 0;
 }
-.cm-layout-1-style-1 .cm-featured-image {
+.cm-layout-1-style-1 .cm-featured-image,
+.cm-layout-1-style-2 .cm-featured-image {
 	flex-basis: 50%;
 }
-.cm-layout-1-style-1 .cm-featured-image img {
+.cm-layout-1-style-1 .cm-featured-image img,
+.cm-layout-1-style-2 .cm-featured-image img {
 	width: 100%;
 }
-.cm-layout-1-style-1 .cm-post-content {
+.cm-layout-1-style-1 .cm-post-content,
+.cm-layout-1-style-2 .cm-post-content {
 	flex: 1;
 	align-items: center;
 	padding: 20px;
@@ -4342,6 +4345,9 @@ Styles for separating single posts loaded from ajax call.
 @media screen and (min-width: 48em) {
 	.cm-layout-1-style-1 .post {
 		flex-direction: row;
+	}
+	.cm-layout-1-style-2 .post {
+		flex-direction: row-reverse;
 	}
 }
 .cm-posts.cm-layout-2-style-1 .post:first-child,

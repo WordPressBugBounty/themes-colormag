@@ -291,334 +291,14 @@ class ColorMag_Dynamic_CSS {
 		/**
 		 * Typography options.
 		 */
-		$base_typography_default                  = array(
-			'font-family'    => 'inherit',
-			'font-weight'    => 'regular',
-			'subsets'        => array( 'latin' ),
-			'font-size'      => array(
-				'desktop' => array(
-					'size' => '15',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height'    => array(
-				'desktop' => array(
-					'size' => '1.6',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'letter-spacing' => array(
-				'desktop' => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'font-style'     => 'normal',
-			'text-transform' => 'none',
-		);
-		$headings_typography_default              = array(
-			'font-family'    => 'inherit',
-			'font-weight'    => 'regular',
-			'subsets'        => array( 'latin' ),
-			'line-height'    => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'letter-spacing' => array(
-				'desktop' => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'font-style'     => 'normal',
-			'text-transform' => 'none',
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h1_typography_default            = array(
-			'font-family'    => 'inherit',
-			'font-weight'    => 'regular',
-			'subsets'        => array( 'latin' ),
-			'font-size'      => array(
-				'desktop' => array(
-					'size' => '40',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height'    => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'letter-spacing' => array(
-				'desktop' => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'font-style'     => 'normal',
-			'text-transform' => 'none',
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h2_typography_default            = array(
-			'font-family'    => 'inherit',
-			'font-weight'    => 'regular',
-			'subsets'        => array( 'latin' ),
-			'font-size'      => array(
-				'desktop' => array(
-					'size' => '32',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height'    => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'letter-spacing' => array(
-				'desktop' => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'font-style'     => 'normal',
-			'text-transform' => 'none',
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h3_typography_default            = array(
-			'font-family'    => 'inherit',
-			'font-weight'    => 'regular',
-			'subsets'        => array( 'latin' ),
-			'font-size'      => array(
-				'desktop' => array(
-					'size' => '24',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height'    => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'letter-spacing' => array(
-				'desktop' => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'font-style'     => 'normal',
-			'text-transform' => 'none',
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h4_typography_default            = array(
-			'font-size'   => array(
-				'desktop' => array(
-					'size' => '20',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height' => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h5_typography_default            = array(
-			'font-size'   => array(
-				'desktop' => array(
-					'size' => '18',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height' => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'color'          => 'var(--cm-color-6)',
-		);
-		$heading_h6_typography_default            = array(
-			'font-size'   => array(
-				'desktop' => array(
-					'size' => '16',
-					'unit' => 'px',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'line-height' => array(
-				'desktop' => array(
-					'size' => '1.2',
-					'unit' => '-',
-				),
-				'tablet'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-				'mobile'  => array(
-					'size' => '',
-					'unit' => '',
-				),
-			),
-			'color'          => 'var(--cm-color-6)',
-		);
+		$base_typography_default                  = self::get_base_typography_default();
+		$headings_typography_default              = self::get_headings_typography_default();
+		$heading_h1_typography_default            = self::get_heading_h1_typography_default();
+		$heading_h2_typography_default            = self::get_heading_h2_typography_default();
+		$heading_h3_typography_default            = self::get_heading_h3_typography_default();
+		$heading_h4_typography_default            = self::get_heading_h4_typography_default();
+		$heading_h5_typography_default            = self::get_heading_h5_typography_default();
+		$heading_h6_typography_default            = self::get_heading_h6_typography_default();
 		$site_title_typography_default       = array(
 			'font-family' => 'default',
 			'font-size'   => array(
@@ -1664,6 +1344,82 @@ class ColorMag_Dynamic_CSS {
 	public static function colormag_editor_block_css() {
 		$parse_css = '';
 
+		/**
+		 * Color palette CSS variables.
+		 *
+		 * `colormag_primary_color`, `colormag_button_background_color`, etc. all
+		 * default to a `var(--cm-color-N)` reference into the Customizer's color
+		 * palette (see inc/customizer/options/global/colors.php), and the theme's
+		 * base button/element styles reference `--cm-color-N` directly. Without
+		 * defining these custom properties here too, any site using a non-default
+		 * palette (or a custom palette) falls back to the theme's hardcoded
+		 * defaults in the editor instead of its actual configured colors.
+		 */
+		$parse_css .= self::generate_color_palette_css_variables();
+
+		// The plain `--cm-color-N` variables (as opposed to the
+		// `--wp--preset--color--cm-color-N` ones above): on the front end these
+		// are only ever generated for Elementor-active sites (see
+		// render_output()), but several Customizer color mods — e.g.
+		// `colormag_button_background_color`, `colormag_primary_color` — store a
+		// bare `var(--cm-color-N)` reference (no fallback) as their value. If
+		// `--cm-color-N` is never defined, that reference is invalid at computed
+		// -value time and the whole declaration is dropped, even with
+		// `!important`.
+		//
+		// This block is NOT scoped to a selector like the rest of this function
+		// (it's a bare `:root{}`), so — unlike everything else here — it isn't
+		// naturally inert when this function's output also gets folded into the
+		// front end's CSS via render_output(). Guarded with is_admin() so it only
+		// ever applies in the editor, leaving the Elementor-only front-end gate
+		// (a separate, pre-existing front-end issue) untouched.
+		if ( is_admin() ) {
+			$color_palette_default = array(
+				'id'     => 'preset-5',
+				'name'   => 'Preset 5',
+				'colors' => array(
+					'cm-color-1' => '#257BC1',
+					'cm-color-2' => '#2270B0',
+					'cm-color-3' => '#FFFFFF',
+					'cm-color-4' => '#F9FEFD',
+					'cm-color-5' => '#27272A',
+					'cm-color-6' => '#16181A',
+					'cm-color-7' => '#8F8F8F',
+					'cm-color-8' => '#FFFFFF',
+					'cm-color-9' => '#C7C7C7',
+				),
+			);
+
+			$color_palette = get_theme_mod( 'colormag_color_palette', $color_palette_default );
+
+			if ( empty( $color_palette ) ) {
+				$parse_css .= ' :root{
+				--cm-color-1: inherit;
+				--cm-color-2: inherit;
+				--cm-color-3: inherit;
+				--cm-color-4: inherit;
+				--cm-color-5: inherit;
+				--cm-color-6: inherit;
+				--cm-color-7: inherit;
+				--cm-color-8: inherit;
+				--cm-color-9: inherit;
+			}';
+			} else {
+				$parse_css .= sprintf(
+					' :root{%s}',
+					array_reduce(
+						array_keys( $color_palette['colors'] ?? [] ),
+						function ( $acc, $curr ) use ( $color_palette ) {
+							$acc .= "--{$curr}: {$color_palette['colors'][$curr]};";
+
+							return $acc;
+						},
+						''
+					)
+				);
+			}
+		}
+
 		// Primary color.
 		$primary_color     = get_theme_mod( 'colormag_primary_color', '#207daf' );
 		$primary_color_css = array(
@@ -1681,7 +1437,615 @@ class ColorMag_Dynamic_CSS {
 
 		$parse_css .= colormag_parse_css( '#207daf', $primary_color, $primary_color_css );
 
+		// Button border color also uses the primary color on the front end
+		// (a separate rule from the button background/text color mods below).
+		$parse_css .= colormag_parse_css(
+			'#207daf',
+			$primary_color,
+			array(
+				'.editor-styles-wrapper .wp-block-button .wp-block-button__link' => array(
+					'border-color' => esc_html( $primary_color ),
+				),
+			)
+		);
+
+		// Button background also falls back to the primary color on the front end
+		// (the front-end's own Primary Color rule covers this selector directly;
+		// the dedicated Button Background override below still wins over this
+		// when it's explicitly set, since it's emitted later in the cascade).
+		$parse_css .= colormag_parse_css(
+			'#207daf',
+			$primary_color,
+			array(
+				'.editor-styles-wrapper .wp-block-button .wp-block-button__link' => array(
+					'background-color' => esc_html( $primary_color ),
+				),
+			)
+		);
+
+		// Blockquote background uses the primary color, same as the front-end.
+		$parse_css .= colormag_parse_css(
+			'#207daf',
+			$primary_color,
+			array(
+				'.editor-styles-wrapper .wp-block-quote' => array(
+					'background-color' => esc_html( $primary_color ),
+				),
+			)
+		);
+
+		// Base text color.
+		//
+		// `.editor-styles-wrapper > *` also needs to be targeted directly (not
+		// just relied on via inheritance): style-editor-block.css hardcodes a
+		// `color` on every direct child, which otherwise wins over an inherited
+		// value from `.editor-styles-wrapper` alone. Same cascade issue as the
+		// base typography `font-family` fix in fix/customizer-fonts-not-loading
+		// -in-block-editor — confirmed live that without this, the Base Color
+		// setting has no effect on paragraph/block text in the editor.
+		$base_color = get_theme_mod( 'colormag_base_color', '' );
+		$parse_css .= colormag_parse_css(
+			'',
+			$base_color,
+			array(
+				'.editor-styles-wrapper, .editor-styles-wrapper > *' => array(
+					'color' => esc_html( $base_color ),
+				),
+			)
+		);
+
+		// Link colors.
+		$link_color = get_theme_mod( 'colormag_link_color', '' );
+		$parse_css .= colormag_parse_css(
+			'',
+			$link_color,
+			array(
+				'.editor-styles-wrapper a' => array(
+					'color' => esc_html( $link_color ),
+				),
+			)
+		);
+
+		$link_hover_color = get_theme_mod( 'colormag_link_hover_color', '' );
+		$parse_css       .= colormag_parse_css(
+			'',
+			$link_hover_color,
+			array(
+				'.editor-styles-wrapper a:hover' => array(
+					'color' => esc_html( $link_hover_color ),
+				),
+			)
+		);
+
+		/**
+		 * Button.
+		 *
+		 * The block editor's Buttons block (.wp-block-button__link) otherwise
+		 * only ever shows Gutenberg's own default styling, since none of the
+		 * Customizer's button options were previously mirrored here.
+		 */
+		$button_selector       = '.editor-styles-wrapper .wp-block-button .wp-block-button__link';
+		$button_hover_selector = '.editor-styles-wrapper .wp-block-button .wp-block-button__link:hover';
+
+		$button_text_color = get_theme_mod( 'colormag_button_color', '' );
+		$parse_css        .= colormag_parse_css(
+			'',
+			$button_text_color,
+			array(
+				$button_selector => array(
+					'color' => esc_html( $button_text_color ),
+				),
+			)
+		);
+
+		$button_hover_text_color = get_theme_mod( 'colormag_button_hover_color', '' );
+		$parse_css              .= colormag_parse_css(
+			'',
+			$button_hover_text_color,
+			array(
+				$button_hover_selector => array(
+					'color' => esc_html( $button_hover_text_color ),
+				),
+			)
+		);
+
+		$button_background_color = get_theme_mod( 'colormag_button_background_color', '' );
+		$parse_css               .= colormag_parse_css(
+			'#207daf',
+			$button_background_color,
+			array(
+				$button_selector => array(
+					'background-color' => esc_html( $button_background_color ),
+				),
+			)
+		);
+
+		$button_background_hover_color = get_theme_mod( 'colormag_button_background_hover_color', '' );
+		$parse_css                     .= colormag_parse_css(
+			'',
+			$button_background_hover_color,
+			array(
+				$button_hover_selector => array(
+					'background-color' => esc_html( $button_background_hover_color ),
+				),
+			)
+		);
+
+		$button_padding_default = array(
+			'top'    => '',
+			'right'  => '',
+			'bottom' => '',
+			'left'   => '',
+			'unit'   => 'px',
+		);
+		$button_padding         = get_theme_mod( 'colormag_button_dimension_padding', $button_padding_default );
+
+		$parse_css .= colormag_parse_dimension_css(
+			$button_padding_default,
+			$button_padding,
+			$button_selector,
+			'padding'
+		);
+
+		$button_border_radius_default = array(
+			'size' => 3,
+			'unit' => 'px',
+		);
+		$button_border_radius         = get_theme_mod( 'colormag_button_border_radius', '' );
+
+		$parse_css .= colormag_parse_slider_css(
+			$button_border_radius_default,
+			$button_border_radius,
+			$button_selector,
+			'border-radius'
+		);
+
+		// Base typography.
+		$base_typography_default = self::get_base_typography_default();
+		$base_typography         = get_theme_mod( 'colormag_base_typography', $base_typography_default );
+
+		// `.editor-styles-wrapper > *` also needs to be targeted directly (not just
+		// relied on via inheritance): style-editor-block.css hardcodes a font-family
+		// on every direct child to normalize block defaults, which otherwise wins
+		// over an inherited value from `.editor-styles-wrapper` alone.
+		//
+		// `.editor-styles-wrapper p, .editor-styles-wrapper li` also need to be
+		// targeted directly for the same reason: style-editor-block.css separately
+		// hardcodes font-size (and, for `li`, line-height) at a *higher*
+		// specificity than `.editor-styles-wrapper > *` (a tag-qualified selector
+		// beats a bare universal one), so those two properties specifically kept
+		// losing even after the fix above — confirmed live that a custom Base
+		// Typography font size had no effect on actual paragraph/list text in the
+		// editor without this.
+		$parse_css .= colormag_parse_typography_css(
+			$base_typography_default,
+			$base_typography,
+			'.editor-styles-wrapper, .editor-styles-wrapper > *, .editor-styles-wrapper p, .editor-styles-wrapper li'
+		);
+
+		// Headings typography.
+		$headings_typography_default = self::get_headings_typography_default();
+		$headings_typography         = get_theme_mod( 'colormag_headings_typography', $headings_typography_default );
+
+		$parse_css .= colormag_parse_typography_color_css(
+			$headings_typography_default,
+			$headings_typography,
+			'.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4, .editor-styles-wrapper h5, .editor-styles-wrapper h6'
+		);
+
+		// Per-level H1-H6 typography, layered on top of the general heading font, same as the front-end.
+		$heading_level_defaults = array(
+			'h1' => self::get_heading_h1_typography_default(),
+			'h2' => self::get_heading_h2_typography_default(),
+			'h3' => self::get_heading_h3_typography_default(),
+			'h4' => self::get_heading_h4_typography_default(),
+			'h5' => self::get_heading_h5_typography_default(),
+			'h6' => self::get_heading_h6_typography_default(),
+		);
+
+		foreach ( $heading_level_defaults as $level => $level_default ) {
+			$level_value = get_theme_mod( "colormag_{$level}_typography", $level_default );
+
+			$parse_css .= colormag_parse_typography_color_css(
+				$level_default,
+				$level_value,
+				".editor-styles-wrapper {$level}"
+			);
+		}
+
 		return $parse_css;
+	}
+
+	/**
+	 * Default value for the `colormag_base_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_base_typography_default() {
+		return array(
+			'font-family'    => 'inherit',
+			'font-weight'    => 'regular',
+			'subsets'        => array( 'latin' ),
+			'font-size'      => array(
+				'desktop' => array(
+					'size' => '15',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height'    => array(
+				'desktop' => array(
+					'size' => '1.6',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'letter-spacing' => array(
+				'desktop' => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'font-style'     => 'normal',
+			'text-transform' => 'none',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_headings_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_headings_typography_default() {
+		return array(
+			'font-family'    => 'inherit',
+			'font-weight'    => 'regular',
+			'subsets'        => array( 'latin' ),
+			'line-height'    => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'letter-spacing' => array(
+				'desktop' => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'font-style'     => 'normal',
+			'text-transform' => 'none',
+			'color'          => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h1_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h1_typography_default() {
+		return array(
+			'font-family'    => 'inherit',
+			'font-weight'    => 'regular',
+			'subsets'        => array( 'latin' ),
+			'font-size'      => array(
+				'desktop' => array(
+					'size' => '40',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height'    => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'letter-spacing' => array(
+				'desktop' => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'font-style'     => 'normal',
+			'text-transform' => 'none',
+			'color'          => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h2_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h2_typography_default() {
+		return array(
+			'font-family'    => 'inherit',
+			'font-weight'    => 'regular',
+			'subsets'        => array( 'latin' ),
+			'font-size'      => array(
+				'desktop' => array(
+					'size' => '32',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height'    => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'letter-spacing' => array(
+				'desktop' => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'font-style'     => 'normal',
+			'text-transform' => 'none',
+			'color'          => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h3_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h3_typography_default() {
+		return array(
+			'font-family'    => 'inherit',
+			'font-weight'    => 'regular',
+			'subsets'        => array( 'latin' ),
+			'font-size'      => array(
+				'desktop' => array(
+					'size' => '24',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height'    => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'letter-spacing' => array(
+				'desktop' => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'font-style'     => 'normal',
+			'text-transform' => 'none',
+			'color'          => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h4_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h4_typography_default() {
+		return array(
+			'font-size'   => array(
+				'desktop' => array(
+					'size' => '20',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height' => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'color'       => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h5_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h5_typography_default() {
+		return array(
+			'font-size'   => array(
+				'desktop' => array(
+					'size' => '18',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height' => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'color'       => 'var(--cm-color-6)',
+		);
+	}
+
+	/**
+	 * Default value for the `colormag_h6_typography` theme mod.
+	 *
+	 * @return array
+	 */
+	private static function get_heading_h6_typography_default() {
+		return array(
+			'font-size'   => array(
+				'desktop' => array(
+					'size' => '16',
+					'unit' => 'px',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'line-height' => array(
+				'desktop' => array(
+					'size' => '1.2',
+					'unit' => '-',
+				),
+				'tablet'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+				'mobile'  => array(
+					'size' => '',
+					'unit' => '',
+				),
+			),
+			'color'       => 'var(--cm-color-6)',
+		);
 	}
 
 	/**
