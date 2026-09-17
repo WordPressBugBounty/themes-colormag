@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: ColorMag 4.2.4\n"
+"Project-Id-Version: ColorMag 4.2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/colormag\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-07T03:51:47+00:00\n"
+"POT-Creation-Date: 2026-09-17T04:49:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: colormag\n"
@@ -364,9 +364,29 @@ msgctxt "weekly archives date format"
 msgid "W"
 msgstr ""
 
-#: inc/class-colormag-starter-content.php:198
+#: inc/class-colormag-starter-content.php:211
 msgctxt "Theme starter content"
 msgid "Blog"
+msgstr ""
+
+#: inc/class-colormag-starter-content.php:249
+msgid "Welcome to your new site!"
+msgstr ""
+
+#: inc/class-colormag-starter-content.php:250
+msgid "We've added starter pages to help you get going quickly. They're only published if you keep them."
+msgstr ""
+
+#: inc/class-colormag-starter-content.php:251
+msgid "Keep the starter pages"
+msgstr ""
+
+#: inc/class-colormag-starter-content.php:252
+msgid "Start with a clean slate"
+msgstr ""
+
+#: inc/class-colormag-starter-content.php:253
+msgid "Don't worry — you can always change this later."
 msgstr ""
 
 #: inc/colormag-wp-query.php:40
@@ -571,7 +591,7 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
-#: inc/compatibility/starter-content/world.php:11
+#: inc/compatibility/starter-content/world.php:10
 msgctxt "Theme starter content"
 msgid "World"
 msgstr ""
@@ -825,7 +845,7 @@ msgstr ""
 #: inc/customizer/options/content/single-page.php:113
 #: inc/customizer/options/content/single-post.php:348
 #: inc/customizer/options/global/button.php:91
-#: inc/customizer/options/global/layout.php:119
+#: inc/customizer/options/global/layout.php:102
 #: inc/customizer/options/global/sidebar.php:68
 #: inc/customizer/panels-sections/panels-sections.php:408
 #: inc/customizer/panels-sections/panels-sections.php:423
@@ -837,7 +857,7 @@ msgstr ""
 #: inc/customizer/options/content/single-page.php:114
 #: inc/customizer/options/content/single-post.php:349
 #: inc/customizer/options/global/button.php:92
-#: inc/customizer/options/global/layout.php:120
+#: inc/customizer/options/global/layout.php:103
 #: inc/customizer/options/global/sidebar.php:69
 #: inc/customizer/panels-sections/panels-sections.php:409
 #: inc/customizer/panels-sections/panels-sections.php:424
@@ -1168,7 +1188,7 @@ msgid "Links"
 msgstr ""
 
 #: inc/customizer/options/footer-builder/copyright.php:47
-#: inc/customizer/options/footer-builder/footer-menu.php:31
+#: inc/customizer/options/footer-builder/footer-menu.php:33
 #: inc/customizer/options/footer-builder/html-1.php:35
 #: inc/customizer/options/footer-builder/main-area.php:67
 #: inc/customizer/options/footer-builder/widget-1.php:71
@@ -1204,7 +1224,7 @@ msgid "Normal"
 msgstr ""
 
 #: inc/customizer/options/footer-builder/copyright.php:54
-#: inc/customizer/options/footer-builder/footer-menu.php:38
+#: inc/customizer/options/footer-builder/footer-menu.php:40
 #: inc/customizer/options/footer-builder/html-1.php:42
 #: inc/customizer/options/footer-builder/main-area.php:74
 #: inc/customizer/options/footer-builder/widget-1.php:78
@@ -1236,7 +1256,7 @@ msgid "Hover"
 msgstr ""
 
 #: inc/customizer/options/footer-builder/copyright.php:97
-#: inc/customizer/options/footer-builder/footer-menu.php:80
+#: inc/customizer/options/footer-builder/footer-menu.php:82
 #: inc/customizer/options/header-and-navigation/primary-menu.php:115
 #: inc/customizer/options/header-and-navigation/primary-menu.php:162
 #: inc/customizer/options/header-and-navigation/primary-menu.php:242
@@ -1307,12 +1327,12 @@ msgstr ""
 #: inc/customizer/options/footer-builder/footer-builder.php:45
 #: inc/customizer/options/footer-builder/widget-6.php:6
 #: inc/customizer/panels-sections/panels-sections.php:358
-#: inc/customizer/panels-sections/panels-sections.php:363
 msgid "Widget 6"
 msgstr ""
 
 #: inc/customizer/options/footer-builder/footer-builder.php:51
 #: inc/customizer/options/footer-builder/widget-7.php:6
+#: inc/customizer/panels-sections/panels-sections.php:363
 msgid "Widget 7"
 msgstr ""
 
@@ -1347,11 +1367,16 @@ msgstr ""
 msgid "Button 1"
 msgstr ""
 
-#: inc/customizer/options/footer-builder/footer-menu.php:11
+#: inc/customizer/options/footer-builder/footer-menu.php:4
+#: inc/customizer/options/header-and-navigation/primary-menu.php:312
+msgid "None"
+msgstr ""
+
+#: inc/customizer/options/footer-builder/footer-menu.php:13
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/customizer/options/footer-builder/footer-menu.php:19
+#: inc/customizer/options/footer-builder/footer-menu.php:21
 msgid "Select a Menu"
 msgstr ""
 
@@ -1631,15 +1656,7 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: inc/customizer/options/global/layout.php:102
-msgid "Demo Migrated"
-msgstr ""
-
-#: inc/customizer/options/global/layout.php:109
-msgid "Demo Migrated To Builder"
-msgstr ""
-
-#: inc/customizer/options/global/layout.php:123
+#: inc/customizer/options/global/layout.php:106
 msgid "Container width adjustment"
 msgstr ""
 
@@ -1808,10 +1825,6 @@ msgstr ""
 #: inc/customizer/options/header-and-navigation/primary-menu.php:301
 #: inc/customizer/options/header-and-navigation/primary-menu.php:309
 msgid "Home Icon/Logo"
-msgstr ""
-
-#: inc/customizer/options/header-and-navigation/primary-menu.php:312
-msgid "None"
 msgstr ""
 
 #: inc/customizer/options/header-and-navigation/primary-menu.php:313
@@ -2372,193 +2385,193 @@ msgstr ""
 msgid "min read"
 msgstr ""
 
-#: inc/template-tags.php:640
+#: inc/template-tags.php:716
 msgid "Euro Member Countries"
 msgstr ""
 
-#: inc/template-tags.php:641
+#: inc/template-tags.php:717
 msgid "Australian Dollar"
 msgstr ""
 
-#: inc/template-tags.php:642
+#: inc/template-tags.php:718
 msgid "Bulgarian Lev"
 msgstr ""
 
-#: inc/template-tags.php:643
+#: inc/template-tags.php:719
 msgid "Brazilian Real"
 msgstr ""
 
-#: inc/template-tags.php:644
+#: inc/template-tags.php:720
 msgid "Canadian Dollar"
 msgstr ""
 
-#: inc/template-tags.php:645
+#: inc/template-tags.php:721
 msgid "Swiss Franc"
 msgstr ""
 
-#: inc/template-tags.php:646
+#: inc/template-tags.php:722
 msgid "Chinese Yuan Renminbi"
 msgstr ""
 
-#: inc/template-tags.php:647
+#: inc/template-tags.php:723
 msgid "Czech Republic Koruna"
 msgstr ""
 
-#: inc/template-tags.php:648
+#: inc/template-tags.php:724
 msgid "Danish Krone"
 msgstr ""
 
-#: inc/template-tags.php:649
+#: inc/template-tags.php:725
 msgid "British Pound"
 msgstr ""
 
-#: inc/template-tags.php:650
+#: inc/template-tags.php:726
 msgid "Hong Kong Dollar"
 msgstr ""
 
-#: inc/template-tags.php:651
+#: inc/template-tags.php:727
 msgid "Croatian Kuna"
 msgstr ""
 
-#: inc/template-tags.php:652
+#: inc/template-tags.php:728
 msgid "Hungarian Forint"
 msgstr ""
 
-#: inc/template-tags.php:653
+#: inc/template-tags.php:729
 msgid "Indonesian Rupiah"
 msgstr ""
 
-#: inc/template-tags.php:654
+#: inc/template-tags.php:730
 msgid "Israeli Shekel"
 msgstr ""
 
-#: inc/template-tags.php:655
+#: inc/template-tags.php:731
 msgid "Indian Rupee"
 msgstr ""
 
-#: inc/template-tags.php:656
+#: inc/template-tags.php:732
 msgid "Japanese Yen"
 msgstr ""
 
-#: inc/template-tags.php:657
+#: inc/template-tags.php:733
 msgid "Korean (South) Won"
 msgstr ""
 
-#: inc/template-tags.php:658
+#: inc/template-tags.php:734
 msgid "Mexican Peso"
 msgstr ""
 
-#: inc/template-tags.php:659
+#: inc/template-tags.php:735
 msgid "Malaysian Ringgit"
 msgstr ""
 
-#: inc/template-tags.php:660
+#: inc/template-tags.php:736
 msgid "Norwegian Krone"
 msgstr ""
 
-#: inc/template-tags.php:661
+#: inc/template-tags.php:737
 msgid "New Zealand Dollar"
 msgstr ""
 
-#: inc/template-tags.php:662
+#: inc/template-tags.php:738
 msgid "Philippine Peso"
 msgstr ""
 
-#: inc/template-tags.php:663
+#: inc/template-tags.php:739
 msgid "Polish Zloty"
 msgstr ""
 
-#: inc/template-tags.php:664
+#: inc/template-tags.php:740
 msgid "Romanian (New) Leu"
 msgstr ""
 
-#: inc/template-tags.php:665
+#: inc/template-tags.php:741
 msgid "Russian Ruble"
 msgstr ""
 
-#: inc/template-tags.php:666
+#: inc/template-tags.php:742
 msgid "Swedish Krona"
 msgstr ""
 
-#: inc/template-tags.php:667
+#: inc/template-tags.php:743
 msgid "Singapore Dollar"
 msgstr ""
 
-#: inc/template-tags.php:668
+#: inc/template-tags.php:744
 msgid "Thai Baht"
 msgstr ""
 
-#: inc/template-tags.php:669
+#: inc/template-tags.php:745
 msgid "Turkish Lira"
 msgstr ""
 
-#: inc/template-tags.php:670
+#: inc/template-tags.php:746
 msgid "United States Dollar"
 msgstr ""
 
-#: inc/template-tags.php:671
+#: inc/template-tags.php:747
 msgid "South African Rand"
 msgstr ""
 
-#: inc/template-tags.php:701
+#: inc/template-tags.php:777
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:703
+#: inc/template-tags.php:779
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:725
+#: inc/template-tags.php:801
 msgid "Post author"
 msgstr ""
 
 #. Translators: 1. Comment date, 2. Comment time
-#: inc/template-tags.php:736
+#: inc/template-tags.php:812
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:743
+#: inc/template-tags.php:819
 msgid "Permalink"
 msgstr ""
 
-#: inc/template-tags.php:755
+#: inc/template-tags.php:831
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:766
+#: inc/template-tags.php:842
 msgid "Reply"
 msgstr ""
 
-#: inc/template-tags.php:804
+#: inc/template-tags.php:880
 msgid "0 View"
 msgstr ""
 
 #. Translators: %s Post view count
-#: inc/template-tags.php:807
+#: inc/template-tags.php:883
 #, php-format
 msgid "%s Views"
 msgstr ""
 
 #. Translators: 1. Post link, 2. Post time, 3. Post date
-#: inc/template-tags.php:1029
+#: inc/template-tags.php:1105
 #, php-format
 msgid "<span class=\"cm-post-date\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s %4$s</a></span>"
 msgstr ""
 
-#: inc/template-tags.php:1081
+#: inc/template-tags.php:1157
 msgid " 0 Comments"
 msgstr ""
 
-#: inc/template-tags.php:1082
+#: inc/template-tags.php:1158
 msgid " 1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:1083
+#: inc/template-tags.php:1159
 msgid " % Comments"
 msgstr ""
 
-#: inc/template-tags.php:1107
+#: inc/template-tags.php:1183
 msgid ", "
 msgstr ""
 
@@ -2574,165 +2587,165 @@ msgstr ""
 msgid "Select an Image"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:26
+#: inc/widgets/class-colormag-widgets.php:43
 #: assets/build/meta.js:1
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:28
+#: inc/widgets/class-colormag-widgets.php:45
 msgid "Shows widgets at Right side."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:40
+#: inc/widgets/class-colormag-widgets.php:57
 #: assets/build/meta.js:1
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:42
+#: inc/widgets/class-colormag-widgets.php:59
 msgid "Shows widgets at Left side."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:52
+#: inc/widgets/class-colormag-widgets.php:69
 msgid "Header Sidebar"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:54
+#: inc/widgets/class-colormag-widgets.php:71
 msgid "Shows widgets in header section just above the main navigation menu."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:65
+#: inc/widgets/class-colormag-widgets.php:82
 msgid "Front Page: Slider Area"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:67
+#: inc/widgets/class-colormag-widgets.php:84
 msgid "Show widget just below menu. Suitable for TG: Featured Cat Slider."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:78
+#: inc/widgets/class-colormag-widgets.php:95
 msgid "Front Page: Area beside slider"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:80
+#: inc/widgets/class-colormag-widgets.php:97
 msgid "Show widget beside the slider. Suitable for TG: Highlighted Posts."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:91
+#: inc/widgets/class-colormag-widgets.php:108
 msgid "Front Page: Content Top Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:93
+#: inc/widgets/class-colormag-widgets.php:110
 msgid "Content Top Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:104
+#: inc/widgets/class-colormag-widgets.php:121
 msgid "Front Page: Content Middle Left Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:106
+#: inc/widgets/class-colormag-widgets.php:123
 msgid "Content Middle Left Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:117
+#: inc/widgets/class-colormag-widgets.php:134
 msgid "Front Page: Content Middle Right Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:119
+#: inc/widgets/class-colormag-widgets.php:136
 msgid "Content Middle Right Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:130
+#: inc/widgets/class-colormag-widgets.php:147
 msgid "Front Page: Content Bottom Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:132
+#: inc/widgets/class-colormag-widgets.php:149
 msgid "Content Middle Bottom Section"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:143
+#: inc/widgets/class-colormag-widgets.php:160
 msgid "Contact Page Sidebar"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:145
+#: inc/widgets/class-colormag-widgets.php:162
 msgid "Shows widgets on Contact Page Template."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:156
+#: inc/widgets/class-colormag-widgets.php:173
 msgid "Error 404 Page Sidebar"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:158
+#: inc/widgets/class-colormag-widgets.php:175
 msgid "Shows widgets on Error 404 page."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:169
+#: inc/widgets/class-colormag-widgets.php:186
 msgid "Advertisement Above The Footer"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:171
+#: inc/widgets/class-colormag-widgets.php:188
 msgid "Shows widgets Just Above The Footer, suitable for TG: 728x90 widget."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:182
+#: inc/widgets/class-colormag-widgets.php:199
 msgid "Footer Sidebar One ( Upper )"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:184
+#: inc/widgets/class-colormag-widgets.php:201
 msgid "Shows widgets at footer sidebar one in upper."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:195
+#: inc/widgets/class-colormag-widgets.php:212
 msgid "Footer Sidebar Two ( Upper )"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:197
+#: inc/widgets/class-colormag-widgets.php:214
 msgid "Shows widgets at footer sidebar two in upper."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:208
+#: inc/widgets/class-colormag-widgets.php:225
 msgid "Footer Sidebar Three ( Upper )"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:210
+#: inc/widgets/class-colormag-widgets.php:227
 msgid "Shows widgets at footer sidebar three in upper."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:221
+#: inc/widgets/class-colormag-widgets.php:238
 msgid "Footer Sidebar One"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:223
+#: inc/widgets/class-colormag-widgets.php:240
 msgid "Shows widgets at footer sidebar one."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:234
+#: inc/widgets/class-colormag-widgets.php:251
 msgid "Footer Sidebar Two"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:236
+#: inc/widgets/class-colormag-widgets.php:253
 msgid "Shows widgets at footer sidebar two."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:247
+#: inc/widgets/class-colormag-widgets.php:264
 msgid "Footer Sidebar Three"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:249
+#: inc/widgets/class-colormag-widgets.php:266
 msgid "Shows widgets at footer sidebar three."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:260
+#: inc/widgets/class-colormag-widgets.php:277
 msgid "Footer Sidebar Four ( Lower )"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:262
+#: inc/widgets/class-colormag-widgets.php:279
 msgid "Shows widgets at footer sidebar four."
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:283
+#: inc/widgets/class-colormag-widgets.php:300
 msgid "Widget Two"
 msgstr ""
 
-#: inc/widgets/class-colormag-widgets.php:293
+#: inc/widgets/class-colormag-widgets.php:310
 msgid "Add widgets here."
 msgstr ""
 
